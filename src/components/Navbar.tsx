@@ -32,35 +32,42 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            3DInnovate
-          </div>
+          <a href="/" className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Forma Factory
+          </a>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection("hero")}
+            <a
+              href="/"
               className="text-foreground/80 hover:text-primary transition-colors"
             >
               Home
-            </button>
-            <button
-              onClick={() => scrollToSection("solutions")}
+            </a>
+            <a
+              href="/features"
               className="text-foreground/80 hover:text-primary transition-colors"
             >
-              Soluzioni
-            </button>
-            <button
-              onClick={() => scrollToSection("about")}
+              Features
+            </a>
+            <a
+              href="/pricing"
               className="text-foreground/80 hover:text-primary transition-colors"
             >
-              Chi Siamo
-            </button>
+              Prezzi
+            </a>
+            <a
+              href="/contact"
+              className="text-foreground/80 hover:text-primary transition-colors"
+            >
+              Contatti
+            </a>
             <Button
               size="sm"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              onClick={() => window.location.href = '/contact'}
             >
-              Contattaci
+              Richiedi Demo
             </Button>
           </div>
 
@@ -77,29 +84,36 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border/50 animate-fade-in">
             <div className="flex flex-col gap-4">
-              <button
-                onClick={() => scrollToSection("hero")}
+              <a
+                href="/"
                 className="text-foreground/80 hover:text-primary transition-colors text-left"
               >
                 Home
-              </button>
-              <button
-                onClick={() => scrollToSection("solutions")}
+              </a>
+              <a
+                href="/features"
                 className="text-foreground/80 hover:text-primary transition-colors text-left"
               >
-                Soluzioni
-              </button>
-              <button
-                onClick={() => scrollToSection("about")}
+                Features
+              </a>
+              <a
+                href="/pricing"
                 className="text-foreground/80 hover:text-primary transition-colors text-left"
               >
-                Chi Siamo
-              </button>
+                Prezzi
+              </a>
+              <a
+                href="/contact"
+                className="text-foreground/80 hover:text-primary transition-colors text-left"
+              >
+                Contatti
+              </a>
               <Button
                 size="sm"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground w-full"
+                onClick={() => window.location.href = '/contact'}
               >
-                Contattaci
+                Richiedi Demo
               </Button>
             </div>
           </div>
