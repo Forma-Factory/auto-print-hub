@@ -1,62 +1,73 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Cog, Monitor, GraduationCap, Zap, FileText, Camera, BarChart3, Cloud, Shield } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Cog, Monitor, GraduationCap, Zap, FileText, Camera, BarChart3, Cloud, Shield, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const features = [
   {
     icon: Cog,
     title: "Sistema di Automatizzazione",
     description: "Cambio automatico dei piatti per produzione continua 24/7",
-    features: ["Cambio piatti automatico", "Zero tempi morti", "Produzione continua"]
+    features: ["Cambio piatti automatico", "Zero tempi morti", "Produzione continua"],
+    link: "/features/automation"
   },
   {
     icon: Monitor,
     title: "Gestione Multi-Stampante",
     description: "Controlla tutte le tue stampanti da un'unica dashboard",
-    features: ["Dashboard centralizzata", "Controllo remoto", "Monitoraggio real-time"]
+    features: ["Dashboard centralizzata", "Controllo remoto", "Monitoraggio real-time"],
+    link: "/features/management"
   },
   {
     icon: FileText,
     title: "Gestione Coda Intelligente",
     description: "Ottimizza automaticamente la coda di stampa",
-    features: ["Priorità automatica", "Bilanciamento carico", "Scheduling avanzato"]
+    features: ["Priorità automatica", "Bilanciamento carico", "Scheduling avanzato"],
+    link: "/features"
   },
   {
     icon: Camera,
     title: "Monitoraggio Live",
     description: "Sorveglia le tue stampe in tempo reale",
-    features: ["Streaming video", "Notifiche istantanee", "Controllo remoto"]
+    features: ["Streaming video", "Notifiche istantanee", "Controllo remoto"],
+    link: "/features/monitoring"
   },
   {
     icon: GraduationCap,
     title: "Piattaforma Didattica",
     description: "Corsi e certificazioni integrate nella piattaforma",
-    features: ["Corsi interattivi", "Progetti guidati", "Certificazioni"]
+    features: ["Corsi interattivi", "Progetti guidati", "Certificazioni"],
+    link: "/features/education"
   },
   {
     icon: BarChart3,
     title: "Analytics Avanzate",
     description: "Statistiche dettagliate su produzione e performance",
-    features: ["Report dettagliati", "KPI in tempo reale", "Analisi costi"]
+    features: ["Report dettagliati", "KPI in tempo reale", "Analisi costi"],
+    link: "/features/analytics"
   },
   {
     icon: Cloud,
     title: "Cloud Storage",
     description: "Archiviazione sicura dei tuoi file di stampa",
-    features: ["Storage illimitato", "Backup automatico", "Accesso ovunque"]
+    features: ["Storage illimitato", "Backup automatico", "Accesso ovunque"],
+    link: "/features"
   },
   {
     icon: Shield,
     title: "Sicurezza Avanzata",
     description: "Protezione dei dati e accesso controllato",
-    features: ["Crittografia end-to-end", "Gestione permessi", "Audit log"]
+    features: ["Crittografia end-to-end", "Gestione permessi", "Audit log"],
+    link: "/features"
   },
   {
     icon: Zap,
     title: "API & Integrazioni",
     description: "Integra con i tuoi sistemi esistenti",
-    features: ["API RESTful", "Webhook", "Plugin personalizzati"]
+    features: ["API RESTful", "Webhook", "Plugin personalizzati"],
+    link: "/features"
   }
 ];
 
@@ -109,7 +120,7 @@ const Features = () => {
                   </CardHeader>
                   
                   <CardContent>
-                    <ul className="space-y-3">
+                    <ul className="space-y-3 mb-6">
                       {feature.features.map((item, i) => (
                         <li key={i} className="flex items-center text-sm text-muted-foreground group-hover:text-foreground transition-colors">
                           <span className="mr-3 h-2 w-2 rounded-full bg-gradient-primary" />
@@ -117,6 +128,12 @@ const Features = () => {
                         </li>
                       ))}
                     </ul>
+                    <Button variant="outline" className="w-full group" asChild>
+                      <Link to={feature.link}>
+                        Scopri di più
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    </Button>
                   </CardContent>
                 </Card>
               );
