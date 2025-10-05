@@ -51,10 +51,10 @@ const Navbar = () => {
               Features
             </a>
             <a
-              href="/pricing"
+              href="/features/education"
               className="text-foreground/80 hover:text-primary transition-colors"
             >
-              Prezzi
+              Didattica
             </a>
             <a
               href="/contact"
@@ -97,10 +97,10 @@ const Navbar = () => {
                 Features
               </a>
               <a
-                href="/pricing"
+                href="/features/education"
                 className="text-foreground/80 hover:text-primary transition-colors text-left"
               >
-                Prezzi
+                Didattica
               </a>
               <a
                 href="/contact"

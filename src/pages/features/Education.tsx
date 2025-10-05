@@ -2,53 +2,51 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, GraduationCap, BookOpen, Award, Users } from "lucide-react";
+import { BookOpen, Users, Trophy, Lightbulb, Rocket, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 import educationImage from "@/assets/feature-education.jpg";
 
 const benefits = [
   {
     icon: BookOpen,
-    title: "Corsi Completi",
-    description: "Dalla teoria alla pratica con progetti guidati step-by-step"
-  },
-  {
-    icon: Award,
-    title: "Certificazioni",
-    description: "Certificazioni riconosciute per validare le competenze acquisite"
+    title: "Didattica Attiva",
+    description: "Metodologie innovative che coinvolgono gli studenti attraverso progetti pratici"
   },
   {
     icon: Users,
-    title: "Community Attiva",
-    description: "Connettiti con altri studenti e professionisti del settore"
+    title: "Apprendimento Collaborativo",
+    description: "Favorire il lavoro di gruppo e lo sviluppo di competenze trasversali"
   },
   {
-    icon: GraduationCap,
-    title: "Docenti Esperti",
-    description: "Impara dai migliori professionisti della stampa 3D"
+    icon: Trophy,
+    title: "Sviluppo Talenti",
+    description: "Aiutiamo ogni ragazzo a scoprire e coltivare le proprie capacità uniche"
+  },
+  {
+    icon: Lightbulb,
+    title: "Creatività & Innovazione",
+    description: "Stimolare il pensiero creativo e la capacità di problem solving"
   }
 ];
 
 const courses = [
-  "Fondamenti della Stampa 3D",
-  "Tecnologie FDM Avanzate",
-  "Stampa in Resina (SLA/DLP)",
-  "Design per la Manifattura Additiva",
-  "Post-Processing e Finitura",
-  "Gestione della Produzione 3D",
-  "Manutenzione delle Stampanti",
-  "Ottimizzazione dei Parametri di Stampa",
-  "Materiali Avanzati",
-  "Business della Stampa 3D"
+  "Introduzione alla Stampa 3D e Modellazione Base",
+  "Design Thinking e Prototipazione Rapida",
+  "Progetti STEAM con Stampa 3D",
+  "Dalla Progettazione alla Realizzazione",
+  "Workshop Tematici Personalizzati",
+  "Percorsi Avanzati per Docenti"
 ];
 
 const features = [
-  "Video tutorial HD con spiegazioni dettagliate",
-  "Progetti pratici con file scaricabili",
-  "Quiz e test di valutazione",
-  "Certificati di completamento",
-  "Accesso a vita ai contenuti",
-  "Aggiornamenti continui dei corsi"
+  "Corsi progettati da esperti del settore",
+  "Materiali didattici sempre aggiornati",
+  "Progetti pratici hands-on",
+  "Certificazioni riconosciute",
+  "Piattaforma integrata per la gestione dei corsi",
+  "Supporto continuo da parte di tutor esperti",
+  "Metodologie didattiche validate",
+  "Focus su competenze del futuro"
 ];
 
 const Education = () => {
@@ -62,24 +60,25 @@ const Education = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/30 backdrop-blur-sm mb-6">
-                <span className="text-primary font-medium">Piattaforma Didattica</span>
+                <span className="text-primary font-medium">Didattica e Formazione</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Impara la Stampa 3D
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Formiamo i Talenti
                 <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  dai Professionisti
+                  del Futuro
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Una piattaforma educativa completa integrata nel nostro sistema. Corsi professionali, 
-                progetti pratici e certificazioni riconosciute per diventare un esperto di stampa 3D.
+                La didattica è uno dei nostri focus principali. Crediamo nell'apprendimento attivo 
+                e integriamo la stampa 3D nei nostri corsi per coinvolgere i ragazzi e aiutarli 
+                a sviluppare i loro talenti attraverso progetti concreti e stimolanti.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-gradient-primary hover:opacity-90" asChild>
                   <Link to="/contact">Scopri i Corsi</Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <Link to="/pricing">Vedi Prezzi</Link>
+                  <Link to="/features">Vedi Altre Soluzioni</Link>
                 </Button>
               </div>
             </div>
@@ -87,7 +86,7 @@ const Education = () => {
             <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <img 
                 src={educationImage} 
-                alt="Piattaforma educativa Forma Factory"
+                alt="Piattaforma didattica Forma Factory"
                 className="rounded-2xl shadow-elegant border border-border/50"
               />
             </div>
@@ -95,15 +94,68 @@ const Education = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Our Approach Section */}
       <section className="py-16 px-4 bg-gradient-subtle">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl font-bold mb-6 leading-tight">
+            Il Nostro Approccio
+          </h2>
+          <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            Siamo esperti nel settore della stampa 3D e della didattica. Cerchiamo sempre 
+            il modo migliore per coinvolgere i ragazzi, rendendo l'apprendimento un'esperienza 
+            entusiasmante e significativa. La nostra piattaforma integra tecnologia e pedagogia 
+            per favorire la didattica attiva attraverso progetti che uniscono creatività, 
+            innovazione e competenze tecniche.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+            <Card className="bg-gradient-card border-border/50 hover:border-primary/50 transition-all">
+              <CardHeader>
+                <div className="mx-auto mb-4 p-4 rounded-2xl bg-primary/20 backdrop-blur-md border border-primary/30 w-fit">
+                  <Target className="h-8 w-8 text-primary" />
+                </div>
+                <CardTitle className="text-xl">Focus sul Pratico</CardTitle>
+                <CardDescription>
+                  Ogni corso include progetti concreti che gli studenti possono toccare con mano
+                </CardDescription>
+              </CardHeader>
+            </Card>
+            
+            <Card className="bg-gradient-card border-border/50 hover:border-primary/50 transition-all">
+              <CardHeader>
+                <div className="mx-auto mb-4 p-4 rounded-2xl bg-primary/20 backdrop-blur-md border border-primary/30 w-fit">
+                  <Rocket className="h-8 w-8 text-primary" />
+                </div>
+                <CardTitle className="text-xl">Innovazione Continua</CardTitle>
+                <CardDescription>
+                  Aggiorniamo costantemente i contenuti per riflettere le ultime tecnologie
+                </CardDescription>
+              </CardHeader>
+            </Card>
+            
+            <Card className="bg-gradient-card border-border/50 hover:border-primary/50 transition-all">
+              <CardHeader>
+                <div className="mx-auto mb-4 p-4 rounded-2xl bg-primary/20 backdrop-blur-md border border-primary/30 w-fit">
+                  <Users className="h-8 w-8 text-primary" />
+                </div>
+                <CardTitle className="text-xl">Team di Esperti</CardTitle>
+                <CardDescription>
+                  Docenti qualificati con esperienza sia in tecnologia che in pedagogia
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">
-              Perché Scegliere i Nostri Corsi
+            <h2 className="text-4xl font-bold mb-4 leading-tight">
+              Perché la Nostra Didattica
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Un percorso formativo completo per ogni livello di competenza
+              Un approccio innovativo per sviluppare competenze concrete
             </p>
           </div>
           
@@ -133,87 +185,82 @@ const Education = () => {
       </section>
 
       {/* Courses Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
+      <section className="py-16 px-4 bg-gradient-subtle">
+        <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">
-              Catalogo Corsi Disponibili
+            <h2 className="text-4xl font-bold mb-4 leading-tight">
+              I Nostri Corsi
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Dal livello base all'avanzato, copriamo tutti gli aspetti della stampa 3D
+            <p className="text-xl text-muted-foreground">
+              Percorsi formativi completi che integrano stampa 3D e didattica attiva
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
-            {courses.map((course, index) => (
-              <Card 
-                key={index}
-                className="bg-gradient-card border-border/50 hover:border-primary/50 transition-all hover:shadow-elegant animate-fade-in"
-                style={{ animationDelay: `${index * 0.05}s` }}
-              >
-                <CardHeader>
-                  <div className="flex items-start gap-3">
-                    <div className="mt-1 p-2 rounded-lg bg-primary/20">
-                      <GraduationCap className="h-5 w-5 text-primary" />
-                    </div>
-                    <CardTitle className="text-lg">{course}</CardTitle>
-                  </div>
-                </CardHeader>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <Card className="bg-gradient-card border-border/50">
+              <CardHeader>
+                <CardTitle className="text-2xl mb-2">Catalogo Corsi</CardTitle>
+                <CardDescription>Scopri la nostra offerta formativa</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  {courses.map((course, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <BookOpen className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
+                      <span>{course}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-gradient-card border-border/50">
+              <CardHeader>
+                <CardTitle className="text-2xl mb-2">Caratteristiche</CardTitle>
+                <CardDescription>Cosa rende speciali i nostri corsi</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  {features.map((feature, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <Lightbulb className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
           </div>
-          
-          <Card className="bg-gradient-card border-border/50 max-w-4xl mx-auto">
-            <CardHeader>
-              <CardTitle className="text-2xl">Caratteristiche dei Corsi</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-2 gap-4">
-                {features.map((feature, index) => (
-                  <div 
-                    key={index}
-                    className="flex items-start gap-3 animate-fade-in"
-                    style={{ animationDelay: `${index * 0.05}s` }}
-                  >
-                    <div className="mt-1 p-1 rounded-full bg-primary/20">
-                      <Check className="h-5 w-5 text-primary" />
-                    </div>
-                    <span className="text-foreground">{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 bg-gradient-subtle">
+      <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="animate-fade-in">
               <div className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
-                50+
+                500+
               </div>
-              <p className="text-xl text-muted-foreground">Corsi Disponibili</p>
+              <div className="text-muted-foreground">Studenti Formati</div>
             </div>
             <div className="animate-fade-in" style={{ animationDelay: "0.1s" }}>
               <div className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
-                5,000+
+                50+
               </div>
-              <p className="text-xl text-muted-foreground">Studenti Attivi</p>
+              <div className="text-muted-foreground">Scuole Partner</div>
             </div>
             <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <div className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
-                200+
+                95%
               </div>
-              <p className="text-xl text-muted-foreground">Ore di Contenuti</p>
+              <div className="text-muted-foreground">Soddisfazione</div>
             </div>
             <div className="animate-fade-in" style={{ animationDelay: "0.3s" }}>
               <div className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
-                98%
+                1000+
               </div>
-              <p className="text-xl text-muted-foreground">Soddisfazione</p>
+              <div className="text-muted-foreground">Progetti Realizzati</div>
             </div>
           </div>
         </div>
@@ -222,14 +269,14 @@ const Education = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-primary">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4 text-white">
-            Inizia il Tuo Percorso Formativo Oggi
+          <h2 className="text-4xl font-bold mb-4 text-white leading-tight">
+            Porta l'Innovazione nella Tua Scuola
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Accedi a tutti i corsi con una singola sottoscrizione. Primo mese gratuito!
+            Scopri come i nostri corsi possono trasformare l'apprendimento dei tuoi studenti
           </p>
           <Button size="lg" variant="secondary" asChild>
-            <Link to="/contact">Inizia Gratis</Link>
+            <Link to="/contact">Richiedi Informazioni</Link>
           </Button>
         </div>
       </section>

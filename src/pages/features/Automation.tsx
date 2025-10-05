@@ -53,7 +53,7 @@ const Automation = () => {
               <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/30 backdrop-blur-sm mb-6">
                 <span className="text-primary font-medium">Sistema di Automatizzazione</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
                 Produzione Continua
                 <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   Senza Interruzioni
