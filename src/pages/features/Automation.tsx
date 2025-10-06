@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, Cog, Clock, TrendingUp, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-import automationImage from "@/assets/feature-automation.jpg";
+import automationImage from "@/assets/automation-system-new.png";
 
 const benefits = [
   {
@@ -73,11 +73,11 @@ const Automation = () => {
               </div>
             </div>
             
-            <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <div className="animate-fade-in bg-slate-900 rounded-2xl p-8 shadow-elegant border border-border/50" style={{ animationDelay: "0.2s" }}>
               <img 
                 src={automationImage} 
                 alt="Sistema di automatizzazione Forma Factory"
-                className="rounded-2xl shadow-elegant border border-border/50"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
