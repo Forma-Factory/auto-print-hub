@@ -4,6 +4,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Cog, Monitor, GraduationCap, Zap, FileText, Camera, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import featureAutomation from "@/assets/feature-automation.jpg";
+import featureManagement from "@/assets/feature-management.jpg";
+import featureAnalytics from "@/assets/feature-analytics.jpg";
+import featureMonitoring from "@/assets/feature-monitoring.jpg";
+import featureEducation from "@/assets/feature-education.jpg";
+import automationSystem from "@/assets/automation-system-new.png";
 
 const features = [
   {
@@ -11,42 +17,48 @@ const features = [
     title: "Sistema di Automatizzazione",
     description: "Cambio automatico dei piatti per produzione continua 24/7",
     features: ["Cambio piatti automatico", "Zero tempi morti", "Produzione continua"],
-    link: "/features/automation"
+    link: "/features/automation",
+    image: automationSystem
   },
   {
     icon: Monitor,
     title: "Gestione Multi-Stampante",
     description: "Controlla tutte le tue stampanti da un'unica dashboard",
     features: ["Dashboard centralizzata", "Controllo remoto", "Monitoraggio real-time"],
-    link: "/features/management"
+    link: "/features/management",
+    image: featureManagement
   },
   {
     icon: FileText,
     title: "Gestione Coda Intelligente",
     description: "Ottimizza automaticamente la coda di stampa",
     features: ["Priorità automatica", "Bilanciamento carico", "Scheduling avanzato"],
-    link: "/features/queue"
+    link: "/features/queue",
+    image: featureAnalytics
   },
   {
     icon: Camera,
     title: "Monitoraggio Live",
     description: "Sorveglia le tue stampe in tempo reale",
     features: ["Streaming video", "Notifiche istantanee", "Controllo remoto"],
-    link: "/features/monitoring"
+    link: "/features/monitoring",
+    image: featureMonitoring
   },
   {
     icon: GraduationCap,
     title: "Piattaforma Didattica",
     description: "Corsi e certificazioni integrate nella piattaforma",
     features: ["Corsi interattivi", "Progetti guidati", "Certificazioni"],
-    link: "/features/education"
+    link: "/features/education",
+    image: featureEducation
   },
   {
     icon: Zap,
     title: "API & Integrazioni",
     description: "Integra con i tuoi sistemi esistenti",
     features: ["API RESTful", "Webhook", "Plugin personalizzati"],
-    link: "/features/integrations"
+    link: "/features/integrations",
+    image: featureAutomation
   }
 ];
 
@@ -86,10 +98,19 @@ const Features = () => {
                   className="group bg-gradient-card border-border/50 hover:border-primary/50 overflow-hidden hover:shadow-elegant transition-all duration-500 animate-fade-in"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  <CardHeader>
-                    <div className="mb-4 p-3 rounded-xl bg-primary/20 backdrop-blur-md border border-primary/30 group-hover:bg-primary/30 transition-all group-hover:scale-110 w-fit">
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={feature.image} 
+                      alt={`${feature.title} - funzionalità Forma Factory`}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+                    <div className="absolute top-4 left-4 p-3 rounded-xl bg-primary/20 backdrop-blur-md border border-primary/30 group-hover:bg-primary/30 transition-all group-hover:scale-110">
                       <Icon className="h-6 w-6 text-primary" />
                     </div>
+                  </div>
+                  
+                  <CardHeader>
                     <CardTitle className="text-2xl group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-accent group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                       {feature.title}
                     </CardTitle>
