@@ -67,7 +67,7 @@ const Solutions = () => {
                   <img 
                     src={solution.image} 
                     alt={`${solution.title} - soluzione per stampa 3D`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
                   <div className="absolute top-4 left-4 p-3 rounded-xl bg-primary/20 backdrop-blur-md border border-primary/30 group-hover:bg-primary/30 transition-all group-hover:scale-110">
