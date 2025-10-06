@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
         
         <div className="pt-8 border-t border-border/50 text-center text-muted-foreground">
-          <p>&copy; 2025 Innovazione 3D. Tutti i diritti riservati.</p>
+          <p>&copy; 2025 Forma Factory. Tutti i diritti riservati.</p>
         </div>
       </div>
     </footer>;
