@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Cog, Monitor, GraduationCap } from "lucide-react";
+import { Link } from "react-router-dom";
 import automationImage from "@/assets/automation-system.jpg";
 import softwareImage from "@/assets/software-management.jpg";
 import educationalImage from "@/assets/educational-platform.jpg";
@@ -10,21 +11,24 @@ const solutions = [
     title: "Sistema di Automatizzazione",
     description: "Cambio automatico dei piatti di stampa per una produzione continua e senza interruzioni",
     image: automationImage,
-    features: ["Cambio automatico piatti", "Produzione continua 24/7", "Ottimizzazione del flusso"]
+    features: ["Cambio automatico piatti", "Produzione continua 24/7", "Ottimizzazione del flusso"],
+    link: "/features/automation"
   },
   {
     icon: Monitor,
     title: "Software di Gestione",
     description: "Piattaforma completa per gestire le tue stampanti e ottimizzare la coda di stampa",
     image: softwareImage,
-    features: ["Gestione multi-stampante", "Coda intelligente", "Monitoraggio in tempo reale"]
+    features: ["Gestione multi-stampante", "Coda intelligente", "Monitoraggio in tempo reale"],
+    link: "/features/management"
   },
   {
     icon: GraduationCap,
     title: "Piattaforma Didattica",
     description: "Integra la stampa 3D con corsi e formazione per un apprendimento completo",
     image: educationalImage,
-    features: ["Corsi interattivi", "Progetti guidati", "Certificazioni"]
+    features: ["Corsi interattivi", "Progetti guidati", "Certificazioni"],
+    link: "/features/education"
   }
 ];
 
@@ -50,11 +54,15 @@ const Solutions = () => {
           {solutions.map((solution, index) => {
             const Icon = solution.icon;
             return (
-              <Card 
+              <Link 
                 key={index}
-                className="group bg-gradient-card border-border/50 hover:border-primary/50 overflow-hidden hover:shadow-elegant transition-all duration-500 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                to={solution.link}
+                className="block"
               >
+                <Card 
+                  className="group bg-gradient-card border-border/50 hover:border-primary/50 overflow-hidden hover:shadow-elegant transition-all duration-500 animate-fade-in cursor-pointer"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
                 <div className="relative h-56 overflow-hidden">
                   <img 
                     src={solution.image} 
@@ -87,6 +95,7 @@ const Solutions = () => {
                   </ul>
                 </CardContent>
               </Card>
+              </Link>
             );
           })}
         </div>
