@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Cog, Monitor, GraduationCap } from "lucide-react";
 import { Link } from "react-router-dom";
 import automationImage from "@/assets/automation-system.jpg";
-import softwareImage from "@/assets/software-management.jpg";
+import softwareImage from "@/assets/software-management-new.png";
 import educationalImage from "@/assets/educational-platform.jpg";
 
 const solutions = [
