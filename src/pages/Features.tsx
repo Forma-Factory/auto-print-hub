@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import featureAutomation from "@/assets/feature-automation.jpg";
 import softwareManagement from "@/assets/software-management-new.png";
 import featureAnalytics from "@/assets/feature-analytics.jpg";
-import featureMonitoring from "@/assets/feature-monitoring.jpg";
+import automationDetail from "@/assets/automation-detail.png";
 import featureEducation from "@/assets/feature-education.jpg";
 import automationSystem from "@/assets/automation-system-new.png";
 import printQueue from "@/assets/print-queue.png";
@@ -43,7 +43,7 @@ const features = [
     description: "Sorveglia le tue stampe in tempo reale",
     features: ["Streaming video", "Notifiche istantanee", "Controllo remoto"],
     link: "/features/monitoring",
-    image: featureMonitoring
+    image: automationDetail
   },
   {
     icon: GraduationCap,
@@ -99,11 +99,11 @@ const Features = () => {
                   className="group bg-gradient-card border-border/50 hover:border-primary/50 overflow-hidden hover:shadow-elegant transition-all duration-500 animate-fade-in"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  <div className={`relative h-48 overflow-hidden ${(feature.title === "Gestione Coda Intelligente" || feature.title === "Gestione Multi-Stampante") ? "bg-slate-900" : ""}`}>
+                  <div className={`relative h-48 overflow-hidden ${(feature.title === "Gestione Coda Intelligente" || feature.title === "Gestione Multi-Stampante" || feature.title === "Monitoraggio Live") ? "bg-slate-900" : ""}`}>
                     <img 
                       src={feature.image} 
                       alt={`${feature.title} - funzionalità Forma Factory`}
-                      className={`w-full h-full ${(feature.title === "Gestione Coda Intelligente" || feature.title === "Gestione Multi-Stampante") ? "object-contain" : "object-cover"} group-hover:scale-110 transition-transform duration-700`}
+                      className={`w-full h-full ${(feature.title === "Gestione Coda Intelligente" || feature.title === "Gestione Multi-Stampante" || feature.title === "Monitoraggio Live") ? "object-contain" : "object-cover"} group-hover:scale-110 transition-transform duration-700`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
                     <div className="absolute top-4 left-4 p-3 rounded-xl bg-primary/20 backdrop-blur-md border border-primary/30 group-hover:bg-primary/30 transition-all group-hover:scale-110">
