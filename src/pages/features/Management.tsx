@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, Monitor, Smartphone, Cloud, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
-import managementImage from "@/assets/feature-management.jpg";
+import managementImage from "@/assets/software-management-new.png";
 
 const benefits = [
   {
@@ -75,11 +75,11 @@ const Management = () => {
               </div>
             </div>
             
-            <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <div className="animate-fade-in bg-slate-900 rounded-2xl p-4" style={{ animationDelay: "0.2s" }}>
               <img 
                 src={managementImage} 
                 alt="Dashboard gestione multi-stampante Forma Factory"
-                className="rounded-2xl shadow-elegant border border-border/50"
+                className="rounded-2xl shadow-elegant border border-border/50 w-full h-auto object-contain"
               />
             </div>
           </div>
