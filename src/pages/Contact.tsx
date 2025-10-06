@@ -5,10 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
-
 const Contact = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navbar />
       
       {/* Hero Section */}
@@ -60,10 +58,7 @@ const Contact = () => {
                   
                   <div className="space-y-2">
                     <label className="text-sm font-medium">Messaggio</label>
-                    <Textarea 
-                      placeholder="Raccontaci delle tue esigenze..." 
-                      className="bg-background/50 min-h-[150px]"
-                    />
+                    <Textarea placeholder="Raccontaci delle tue esigenze..." className="bg-background/50 min-h-[150px]" />
                   </div>
                   
                   <Button className="w-full bg-gradient-primary hover:opacity-90" size="lg">
@@ -86,8 +81,8 @@ const Contact = () => {
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Email</h4>
-                        <p className="text-muted-foreground">info@formafactory.it</p>
-                        <p className="text-muted-foreground">support@formafactory.it</p>
+                        <p className="text-muted-foreground">lucacervone91@gmail.com</p>
+                        
                       </div>
                     </CardContent>
                   </Card>
@@ -99,7 +94,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Telefono</h4>
-                        <p className="text-muted-foreground">+39 02 1234 5678</p>
+                        <p className="text-muted-foreground">+39 328 597 3737</p>
                         <p className="text-sm text-muted-foreground/70">Lun-Ven: 9:00 - 18:00</p>
                       </div>
                     </CardContent>
@@ -112,7 +107,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Sede</h4>
-                        <p className="text-muted-foreground">Via Innovazione 123</p>
+                        <p className="text-muted-foreground">Via porta posillipo 68</p>
                         <p className="text-muted-foreground">20100 Milano, Italia</p>
                       </div>
                     </CardContent>
@@ -138,8 +133,6 @@ const Contact = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
