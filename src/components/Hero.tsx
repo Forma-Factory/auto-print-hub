@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-3d-printer.jpg";
 
 const Hero = () => {
@@ -31,14 +32,12 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-wrap gap-4">
-            <Button size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground shadow-elegant hover:shadow-glow transition-all">
-              Inizia Ora
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button size="lg" variant="outline" className="group border-primary/50 hover:bg-primary/10 hover:border-primary transition-all">
-              <Play className="mr-2 h-5 w-5" />
-              Guarda Demo
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground shadow-elegant hover:shadow-glow transition-all">
+                Inizia Ora
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
           </div>
 
           <div className="flex items-center gap-8 pt-4">
