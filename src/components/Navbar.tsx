@@ -64,6 +64,14 @@ const Navbar = () => {
             </a>
             <Button
               size="sm"
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+              onClick={() => window.open('https://formafactory.unwn.dev/', '_blank')}
+            >
+              Login
+            </Button>
+            <Button
+              size="sm"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
               onClick={() => window.location.href = '/contact'}
             >
@@ -108,6 +116,14 @@ const Navbar = () => {
               >
                 Contatti
               </a>
+              <Button
+                size="sm"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full"
+                onClick={() => window.open('https://formafactory.unwn.dev/', '_blank')}
+              >
+                Login
+              </Button>
               <Button
                 size="sm"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground w-full"
