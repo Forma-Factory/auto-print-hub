@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Cog, Monitor, GraduationCap, Zap, FileText, Camera, BarChart3, Cloud, Shield, ArrowRight } from "lucide-react";
+import { Cog, Monitor, GraduationCap, Zap, FileText, Camera, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const features = [
@@ -25,7 +25,7 @@ const features = [
     title: "Gestione Coda Intelligente",
     description: "Ottimizza automaticamente la coda di stampa",
     features: ["Priorità automatica", "Bilanciamento carico", "Scheduling avanzato"],
-    link: "/features"
+    link: "/features/queue"
   },
   {
     icon: Camera,
@@ -42,32 +42,11 @@ const features = [
     link: "/features/education"
   },
   {
-    icon: BarChart3,
-    title: "Analytics Avanzate",
-    description: "Statistiche dettagliate su produzione e performance",
-    features: ["Report dettagliati", "KPI in tempo reale", "Analisi costi"],
-    link: "/features/analytics"
-  },
-  {
-    icon: Cloud,
-    title: "Cloud Storage",
-    description: "Archiviazione sicura dei tuoi file di stampa",
-    features: ["Storage illimitato", "Backup automatico", "Accesso ovunque"],
-    link: "/features"
-  },
-  {
-    icon: Shield,
-    title: "Sicurezza Avanzata",
-    description: "Protezione dei dati e accesso controllato",
-    features: ["Crittografia end-to-end", "Gestione permessi", "Audit log"],
-    link: "/features"
-  },
-  {
     icon: Zap,
     title: "API & Integrazioni",
     description: "Integra con i tuoi sistemi esistenti",
     features: ["API RESTful", "Webhook", "Plugin personalizzati"],
-    link: "/features"
+    link: "/features/integrations"
   }
 ];
 

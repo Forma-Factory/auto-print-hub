@@ -12,6 +12,8 @@ import Management from "./pages/features/Management";
 import Education from "./pages/features/Education";
 import Monitoring from "./pages/features/Monitoring";
 import Analytics from "./pages/features/Analytics";
+import Queue from "./pages/features/Queue";
+import Integrations from "./pages/features/Integrations";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +31,8 @@ const App = () => (
           <Route path="/features/education" element={<Education />} />
           <Route path="/features/monitoring" element={<Monitoring />} />
           <Route path="/features/analytics" element={<Analytics />} />
+          <Route path="/features/queue" element={<Queue />} />
+          <Route path="/features/integrations" element={<Integrations />} />
           <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
