@@ -19,14 +19,14 @@ const Hero = () => {
             <span className="text-primary font-medium">Innovazione nella Stampa 3D</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight">
             Il Futuro della{" "}
             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
               Stampa 3D
             </span>
           </h1>
           
-          <p className="text-xl text-muted-foreground max-w-xl leading-relaxed">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed">
             Trasformiamo la produzione con automazione intelligente, software avanzato e 
             formazione integrata. La tua stampante 3D, potenziata.
           </p>
@@ -40,20 +40,20 @@ const Hero = () => {
             </Link>
           </div>
 
-          <div className="flex items-center gap-8 pt-4">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-8 pt-4">
             <div className="group cursor-default">
-              <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform">24/7</div>
-              <div className="text-sm text-muted-foreground">Produzione Continua</div>
+              <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform">24/7</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">Produzione Continua</div>
             </div>
-            <div className="h-12 w-px bg-border/50" />
+            <div className="h-12 w-px bg-border/50 hidden sm:block" />
             <div className="group cursor-default">
-              <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform">100%</div>
-              <div className="text-sm text-muted-foreground">Automatizzato</div>
+              <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform">100%</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">Automatizzato</div>
             </div>
-            <div className="h-12 w-px bg-border/50" />
+            <div className="h-12 w-px bg-border/50 hidden sm:block" />
             <div className="group cursor-default">
-              <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform">+50%</div>
-              <div className="text-sm text-muted-foreground">Efficienza</div>
+              <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:scale-110 transition-transform">+50%</div>
+              <div className="text-xs sm:text-sm text-muted-foreground">Efficienza</div>
             </div>
           </div>
         </div>
@@ -69,14 +69,14 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
           </div>
           
-          <div className="absolute -bottom-6 -right-6 bg-card/90 border border-primary/30 rounded-2xl p-6 backdrop-blur-xl shadow-elegant animate-scale-in hover:scale-105 transition-transform" style={{ animationDelay: "0.6s" }}>
-            <div className="flex items-center gap-4">
-              <div className="h-12 w-12 rounded-full bg-gradient-primary flex items-center justify-center shadow-glow">
-                <span className="text-2xl">🚀</span>
+          <div className="absolute -bottom-4 sm:-bottom-6 -right-2 sm:-right-6 bg-card/90 border border-primary/30 rounded-2xl p-3 sm:p-6 backdrop-blur-xl shadow-elegant animate-scale-in hover:scale-105 transition-transform max-w-[90%] sm:max-w-none" style={{ animationDelay: "0.6s" }}>
+            <div className="flex items-center gap-2 sm:gap-4">
+              <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gradient-primary flex items-center justify-center shadow-glow flex-shrink-0">
+                <span className="text-xl sm:text-2xl">🚀</span>
               </div>
-              <div>
-                <div className="font-bold text-foreground">Automazione Totale</div>
-                <div className="text-sm text-muted-foreground">Cambio piatti automatico</div>
+              <div className="min-w-0">
+                <div className="font-bold text-foreground text-sm sm:text-base truncate">Automazione Totale</div>
+                <div className="text-xs sm:text-sm text-muted-foreground truncate">Cambio piatti automatico</div>
               </div>
             </div>
           </div>

@@ -29,14 +29,14 @@ const About = () => {
             <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/30 backdrop-blur-sm mb-6">
               <span className="text-primary font-medium">Il Nostro DNA</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Chi Siamo
             </h2>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
               Siamo un'azienda innovativa che sta rivoluzionando il mondo della stampa 3D 
               attraverso l'automazione intelligente e software avanzati.
             </p>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed">
               La nostra missione è rendere la stampa 3D più accessibile, efficiente e 
               integrata con la formazione, creando un ecosistema completo per professionisti 
               e studenti.
