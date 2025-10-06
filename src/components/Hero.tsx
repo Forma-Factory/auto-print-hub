@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-3d-printer.jpg";
+import heroImage from "@/assets/automation-detail.png";
 
 const Hero = () => {
   return (
