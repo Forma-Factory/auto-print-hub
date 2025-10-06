@@ -10,6 +10,7 @@ import featureAnalytics from "@/assets/feature-analytics.jpg";
 import featureMonitoring from "@/assets/feature-monitoring.jpg";
 import featureEducation from "@/assets/feature-education.jpg";
 import automationSystem from "@/assets/automation-system-new.png";
+import printQueue from "@/assets/print-queue.png";
 
 const features = [
   {
@@ -34,7 +35,7 @@ const features = [
     description: "Ottimizza automaticamente la coda di stampa",
     features: ["Priorità automatica", "Bilanciamento carico", "Scheduling avanzato"],
     link: "/features/queue",
-    image: featureAnalytics
+    image: printQueue
   },
   {
     icon: Camera,
