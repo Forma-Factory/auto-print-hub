@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, Camera, Bell, PlayCircle, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
-import monitoringImage from "@/assets/feature-monitoring.jpg";
+import monitoringImage from "@/assets/automation-detail.png";
 
 const benefits = [
   {
@@ -79,11 +79,11 @@ const Monitoring = () => {
             
             <div className="relative animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-accent/30 rounded-3xl filter blur-3xl animate-pulse" />
-              <div className="relative rounded-3xl overflow-hidden border border-primary/20 shadow-glow backdrop-blur-sm group hover:border-primary/40 transition-all">
+              <div className="relative rounded-3xl overflow-hidden border border-primary/20 shadow-glow backdrop-blur-sm group hover:border-primary/40 transition-all bg-slate-900 p-4">
                 <img 
                   src={monitoringImage} 
                   alt="Sistema di monitoraggio Forma Factory"
-                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
               </div>
