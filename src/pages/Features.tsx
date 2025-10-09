@@ -99,7 +99,7 @@ const Features = () => {
                   className="group bg-gradient-card border-border/50 hover:border-primary/50 overflow-hidden hover:shadow-elegant transition-all duration-500 animate-fade-in"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  <div className={`relative h-48 overflow-hidden ${(feature.title === "Gestione Coda Intelligente" || feature.title === "Gestione Multi-Stampante" || feature.title === "Monitoraggio Live" || feature.title === "Piattaforma Didattica") ? "bg-slate-900" : ""}`}>
+                  <div className={`relative h-48 overflow-hidden ${(feature.title === "Gestione Coda Intelligente" || feature.title === "Gestione Multi-Stampante" || feature.title === "Monitoraggio Live" || feature.title === "Piattaforma Didattica") ? "bg-slate-900 p-4" : ""}`}>
                     <img 
                       src={feature.image} 
                       alt={`${feature.title} - funzionalità Forma Factory`}
