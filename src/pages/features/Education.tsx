@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, Users, Trophy, Lightbulb, Rocket, Target } from "lucide-react";
 import { Link } from "react-router-dom";
-import educationImage from "@/assets/feature-education.jpg";
+import academyPlatform from "@/assets/academy-platform.png";
 
 const benefits = [
   {
@@ -83,11 +83,11 @@ const Education = () => {
               </div>
             </div>
             
-            <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <div className="animate-fade-in bg-slate-900 rounded-2xl p-8 shadow-elegant border border-border/50" style={{ animationDelay: "0.2s" }}>
               <img 
-                src={educationImage} 
+                src={academyPlatform} 
                 alt="Piattaforma didattica Forma Factory"
-                className="rounded-2xl shadow-elegant border border-border/50"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
