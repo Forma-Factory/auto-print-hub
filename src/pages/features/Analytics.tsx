@@ -77,12 +77,28 @@ const Analytics = () => {
               </div>
             </div>
             
-            <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              <img 
-                src={analyticsImage} 
-                alt="Dashboard analytics Forma Factory"
-                className="rounded-2xl shadow-elegant border border-border/50"
-              />
+            <div className="relative animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-accent/30 rounded-3xl filter blur-3xl animate-pulse" />
+              <div className="relative rounded-3xl overflow-hidden border border-primary/20 shadow-glow backdrop-blur-sm group hover:border-primary/40 transition-all">
+                <img 
+                  src={analyticsImage} 
+                  alt="Dashboard analytics Forma Factory"
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+              </div>
+              
+              <div className="absolute -bottom-4 sm:-bottom-6 -right-2 sm:-right-6 bg-card/90 border border-primary/30 rounded-2xl p-3 sm:p-6 backdrop-blur-xl shadow-elegant animate-scale-in hover:scale-105 transition-transform max-w-[90%] sm:max-w-none" style={{ animationDelay: "0.6s" }}>
+                <div className="flex items-center gap-2 sm:gap-4">
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gradient-primary flex items-center justify-center shadow-glow flex-shrink-0">
+                    <span className="text-xl sm:text-2xl">📈</span>
+                  </div>
+                  <div className="min-w-0">
+                    <div className="font-bold text-foreground text-sm sm:text-base truncate">Intelligence AI</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground truncate">Decisioni data-driven</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
