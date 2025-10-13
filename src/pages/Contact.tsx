@@ -15,9 +15,9 @@ const Contact = () => {
           <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/30 backdrop-blur-sm mb-6 animate-fade-in">
             <span className="text-primary font-medium">Contattaci</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in leading-[1.2] pb-4 overflow-visible">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in leading-[1.3]">
             Parliamo del Tuo
-            <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent overflow-visible">
+            <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent pb-3">
               Progetto
             </span>
           </h1>
