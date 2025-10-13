@@ -108,7 +108,7 @@ const Contact = () => {
                       <div>
                         <h4 className="font-semibold mb-1">Sede</h4>
                         <p className="text-muted-foreground">Via porta posillipo 68</p>
-                        <p className="text-muted-foreground">20100 Milano, Italia</p>
+                        <p className="text-muted-foreground">80122 Napoli, Italia</p>
                       </div>
                     </CardContent>
                   </Card>
