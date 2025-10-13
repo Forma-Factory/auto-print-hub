@@ -1,9 +1,30 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/automation-detail.png";
+import { usePWA } from "@/hooks/usePWA";
+import { useToast } from "@/hooks/use-toast";
 
 const Hero = () => {
+  const { isInstallable, isInstalled, installApp } = usePWA();
+  const { toast } = useToast();
+
+  const handleInstallClick = async () => {
+    const success = await installApp();
+    if (success) {
+      toast({
+        title: "App installata!",
+        description: "Forma Factory è stata aggiunta alla tua schermata home",
+      });
+    } else {
+      toast({
+        title: "Installazione non disponibile",
+        description: "Usa il menu del tuo browser per installare l'app",
+        variant: "destructive",
+      });
+    }
+  };
+
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center px-4 pt-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-hero" />
@@ -38,6 +59,17 @@ const Hero = () => {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
+            {(isInstallable && !isInstalled) && (
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="group border-accent text-accent hover:bg-accent hover:text-accent-foreground shadow-elegant transition-all"
+                onClick={handleInstallClick}
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Scarica App
+              </Button>
+            )}
           </div>
 
           <div className="flex flex-wrap items-center gap-4 sm:gap-8 pt-4">
