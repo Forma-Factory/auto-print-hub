@@ -119,10 +119,18 @@ const Navbar = () => {
           </button>
         </div>
 
+        {/* Mobile Menu Backdrop */}
+        {isMobileMenuOpen && (
+          <div 
+            className="fixed inset-0 bg-background/95 backdrop-blur-md z-40 md:hidden animate-fade-in"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+        )}
+
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border/50 animate-fade-in">
-            <div className="flex flex-col gap-4">
+          <div className="absolute left-0 right-0 top-full bg-background/98 backdrop-blur-lg border-t border-b border-border/50 shadow-2xl z-50 md:hidden animate-fade-in">
+            <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
               <a
                 href="/"
                 className="text-foreground/80 hover:text-primary transition-colors text-left"
