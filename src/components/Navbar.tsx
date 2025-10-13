@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { usePWA } from "@/hooks/usePWA";
+import { useToast } from "@/hooks/use-toast";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { isInstallable, isInstalled, installApp } = usePWA();
+  const { toast } = useToast();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +23,22 @@ const Navbar = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
       setIsMobileMenuOpen(false);
+    }
+  };
+
+  const handleInstallClick = async () => {
+    const success = await installApp();
+    if (success) {
+      toast({
+        title: "App installata!",
+        description: "Forma Factory è stata aggiunta alla tua schermata home",
+      });
+    } else {
+      toast({
+        title: "Installazione non disponibile",
+        description: "Usa il menu del tuo browser per installare l'app",
+        variant: "destructive",
+      });
     }
   };
 
@@ -62,6 +82,17 @@ const Navbar = () => {
             >
               Contatti
             </a>
+            {(isInstallable && !isInstalled) && (
+              <Button
+                size="sm"
+                variant="outline"
+                className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+                onClick={handleInstallClick}
+              >
+                <Download className="h-4 w-4 mr-2" />
+                Scarica App
+              </Button>
+            )}
             <Button
               size="sm"
               variant="outline"
@@ -116,6 +147,17 @@ const Navbar = () => {
               >
                 Contatti
               </a>
+              {(isInstallable && !isInstalled) && (
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="border-accent text-accent hover:bg-accent hover:text-accent-foreground w-full"
+                  onClick={handleInstallClick}
+                >
+                  <Download className="h-4 w-4 mr-2" />
+                  Scarica App
+                </Button>
+              )}
               <Button
                 size="sm"
                 variant="outline"
