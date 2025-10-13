@@ -9,12 +9,24 @@ export const usePWA = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [isInstallable, setIsInstallable] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Check if device is mobile
+    const checkMobile = () => {
+      setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
+    };
+    checkMobile();
+
     // Check if app is already installed
     if (window.matchMedia('(display-mode: standalone)').matches) {
       setIsInstalled(true);
       return;
+    }
+
+    // On mobile, always show button
+    if (isMobile) {
+      setIsInstallable(true);
     }
 
     const handleBeforeInstallPrompt = (e: Event) => {
@@ -36,7 +48,7 @@ export const usePWA = () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
       window.removeEventListener('appinstalled', handleAppInstalled);
     };
-  }, []);
+  }, [isMobile]);
 
   const installApp = async () => {
     if (!deferredPrompt) return false;
@@ -57,5 +69,6 @@ export const usePWA = () => {
     isInstallable,
     isInstalled,
     installApp,
+    isMobile,
   };
 };

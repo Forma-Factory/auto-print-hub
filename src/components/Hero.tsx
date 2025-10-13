@@ -6,7 +6,7 @@ import { usePWA } from "@/hooks/usePWA";
 import { useToast } from "@/hooks/use-toast";
 
 const Hero = () => {
-  const { isInstallable, isInstalled, installApp } = usePWA();
+  const { isInstallable, isInstalled, installApp, isMobile } = usePWA();
   const { toast } = useToast();
 
   const handleInstallClick = async () => {
@@ -17,11 +17,23 @@ const Hero = () => {
         description: "Forma Factory è stata aggiunta alla tua schermata home",
       });
     } else {
-      toast({
-        title: "Installazione non disponibile",
-        description: "Usa il menu del tuo browser per installare l'app",
-        variant: "destructive",
-      });
+      // Show instructions for manual installation on mobile
+      if (isMobile) {
+        const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+        toast({
+          title: "Installa l'app",
+          description: isIOS 
+            ? "Tocca l'icona Condividi e poi 'Aggiungi a Home'" 
+            : "Apri il menu del browser e seleziona 'Installa app'",
+          duration: 5000,
+        });
+      } else {
+        toast({
+          title: "Installazione non disponibile",
+          description: "Usa il menu del tuo browser per installare l'app",
+          variant: "destructive",
+        });
+      }
     }
   };
 
